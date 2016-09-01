@@ -9,6 +9,7 @@ class Bot: #This will be our main class that will hold all that we need for the 
     self.name = ""
     self.age=""
     self.fv_color=""
+    self.undefinedList = []
     
     #geting info from file
     for line in data.readlines():
@@ -24,3 +25,9 @@ class Bot: #This will be our main class that will hold all that we need for the 
     if key == keywd and self.line[3] == ":":
       info = self.line[4:len(self.line)]
       return info
+      
+  def findUndefined(self):
+    for items in self.data:
+      if items = "":
+        self.undefinedList.append(items)
+      
