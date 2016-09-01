@@ -21,7 +21,7 @@ class Bot: #This will be our main class that will hold all that we need for the 
         ses_line = line
       
     self.ses += 1 #Litterally just finds out if your on your first session
-    self.data_line[ses_line] = self.ses + \n
+    self.data_line[ses_line] = self.ses + /n
     
     if self.ses > 1:
       for i in range(data):
