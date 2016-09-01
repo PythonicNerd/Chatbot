@@ -12,7 +12,15 @@ class Bot: #This will be our main class that will hold all that we need for the 
     
     #geting info from file
     for line in data.readlines():
-      key = line[0:2].lower()
-      if key == "fvc":
-        self.fv_color = line[2:len(line)]
+      self.line = line
     
+      self.fv_color = self.grab("fvc")
+      self.name = self.grab("nme")
+      self.age = self.grab("age")
+      
+    
+  def grab(self,keywd):
+    key = self.line[0:3]
+    if key == keywd and self.line[3] == ":":
+      info = self.line[4:len(self.line)]
+      return info
