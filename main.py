@@ -5,11 +5,9 @@ class Bot: #This will be our main class that will hold all that we need for the 
   
   def __init__(self):
     self.data = open("knowledge","r+")
+    self.data_lines = self.data.readlines()
     #getting info about the user
-    self.name = ""
-    self.age=""
-    self.fv_color=""
-    self.undefinedList = []
+    
     
     #geting info from file
     for line in data.readlines():
@@ -18,6 +16,16 @@ class Bot: #This will be our main class that will hold all that we need for the 
       self.fv_color = self.grab("fvc")
       self.name = self.grab("nme")
       self.age = self.grab("age")
+      self.ses = int(self.grab("ses"))
+      if self.ses:
+        ses_line = line
+      
+    self.ses += 1 #Litterally just finds out if your on your first session
+    self.data_line[ses_line] = self.ses + \n
+    
+    if self.ses > 1:
+      for i in range(data):
+        i = "I don't know this about you"
       
     
   def grab(self,keywd):
