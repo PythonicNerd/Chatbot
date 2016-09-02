@@ -23,9 +23,9 @@ class Bot: #This will be our main class that will hold all that we need for the 
     self.ses += 1 #Litterally just finds out if your on your first session
     self.data_line[ses_line] = self.ses + /n
     
-    if self.ses > 1:
-      for i in range(data):
-        i = "I don't know this about you"
+    if self.ses == 1:
+      for i in self.dataList:
+        i = "Unknown"
       
     
   def grab(self,keywd):
